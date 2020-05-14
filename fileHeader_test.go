@@ -91,7 +91,7 @@ func TestFileHeader__ImmediateOrigin(t *testing.T) {
 	}
 
 	// Test with BypassOriginValidation
-	header.SetValidation(&ach.ValidateOpts{BypassOriginValidation: true})
+	header.SetValidation(&ValidateOpts{BypassOriginValidation: true})
 	header.ImmediateOrigin = "1234567899"
 	if v := header.ImmediateOriginField(); v != header.ImmediateOrigin {
 		t.Errorf("got %q", v)

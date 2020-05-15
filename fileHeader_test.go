@@ -96,7 +96,7 @@ func TestFileHeader__ImmediateOrigin(t *testing.T) {
 	if v := header.ImmediateOriginField(); v != header.ImmediateOrigin {
 		t.Errorf("got %q", v)
 	}
-	
+
 	// make sure our trim works that we hook into FileHeader.Parse(..)
 	if v := trimImmediateOriginLeadingZero("0123456789"); v != "123456789" {
 		t.Errorf("got %q", v)
